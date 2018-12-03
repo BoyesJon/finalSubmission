@@ -1,0 +1,132 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 3,
+    "eye": [0, 0, 5],
+    "up": [0, 1, 0],
+    "look": [0, 0, -1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+
+  "lights": [
+    {
+      "type": "directional",
+      "direction": [0,0,-1],
+      "color": [0.5,0.5,0.5]
+    },
+    {
+      "type": "point",
+      "position": [0.5, 0.15, -0.10],
+      "color": [0.8,0.1,0.2],
+      "isDim": true,
+      "lightRadius": 75
+    },
+    {
+      "type": "point",
+      "position": [-0.5, 0.15, -0.10],
+      "color": [0.1,0.8,0.2],
+      "isDim": true,
+      "lightRadius": 75
+    },
+    {
+      "type": "point",
+      "position": [0.0, 0.15, 0.0],
+      "color": [0.1,0.2,0.8],
+      "isDim": true,
+      "lightRadius": 75
+    }
+],
+
+  "materials": [
+    {
+      "name": "wood",
+      "ka": [0.0396, 0.0263, 0.0129],
+      "kd": [0.396, 0.263, 0.129],
+      "ks": [0.0, 0.0, 0.0],
+      "km": [0.05, 0.05, 0.05],
+      "phong_exponent": 20
+    },
+    {
+      "name": "light wood",
+      "ka": [0.0545, 0.0365, 0.018],
+      "kd": [0.545, 0.365, 0.18],
+      "ks": [0.0, 0.0, 0.0],
+      "km": [0.05, 0.05, 0.05],
+      "phong_exponent": 20
+    },
+    {
+      "name": "Lambertian blue",
+      "ka": [0.02, 0.03, 0.08],
+      "kd": [0.2, 0.3, 0.8],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.2,0.2,0.2],
+      "phong_exponent": 20
+    },
+     {
+      "name": "neutral gray",
+      "ka": [0.0651, 0.0651, 0.0651],
+      "kd": [0.651, 0.651, 0.651],
+      "ks": [0.75, 0.75, 0.75],
+      "km": [0.05, 0.05, 0.05],
+      "phong_exponent": 1000
+    }
+  ],
+
+  "objects": [
+    {
+      "type": "sphere",
+      "material": "neutral gray",
+      "center": [0, 0.05, -0.25],
+      "radius": 0.2
+    },
+    {
+      "type": "sphere",
+      "material": "neutral gray",
+      "center": [0.5, 0.0, -0.25],
+      "radius": 0.15
+    },
+    {
+      "type": "sphere",
+      "material": "neutral gray",
+      "center": [-0.5, 0.0, -0.25],
+      "radius": 0.15
+    },
+    {
+      "type": "rectPrism",
+      "material": "wood",
+      "minPoint": [-1.0, -0.35, 0],
+      "maxPoint": [1.0, -0.15, -0.5]
+    },
+    {
+      "type": "rectPrism",
+      "material": "light wood",
+      "minPoint": [-0.9, -0.5, -0.1],
+      "maxPoint": [-0.7, -0.35, -0.2]
+    },
+    {
+      "type": "rectPrism",
+      "material": "light wood",
+      "minPoint": [-0.9, -0.5, -0.3],
+      "maxPoint": [-0.7, -0.35, -0.4]
+    },
+    {
+      "type": "rectPrism",
+      "material": "light wood",
+      "minPoint": [0.7, -0.5, -0.1],
+      "maxPoint": [0.9, -0.35, -0.2]
+    },
+    {
+      "type": "rectPrism",
+      "material": "light wood",
+      "minPoint": [0.7, -0.5, -0.3],
+      "maxPoint": [0.9, -0.35, -0.4]
+    },
+    {
+      "type": "plane",
+      "material": "Lambertian blue",
+      "point": [0, -0.5, 0],
+      "normal": [0, 1, 0]
+    }
+  ]
+}
